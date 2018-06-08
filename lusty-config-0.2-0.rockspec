@@ -1,0 +1,32 @@
+-- This file was automatically generated for the LuaDist project.
+
+package = "lusty-config"
+version = "0.2-0"
+-- LuaDist source
+source = {
+  tag = "0.2-0",
+  url = "git://github.com/LuaDist-testing/lusty-config.git"
+}
+-- Original source
+-- source = {
+--   url = "https://github.com/Olivine-Labs/lusty-config/archive/v0.2.tar.gz",
+--   dir = "lusty-config-0.2"
+-- }
+description = {
+  summary = "Configuration table plugin for lusty.",
+  detailed = [[
+    Allows configuring lusty using a lua table
+  ]],
+  homepage = "http://olivinelabs.com/lusty/",
+  license = "MIT <http://opensource.org/licenses/MIT>"
+}
+dependencies = {
+  "lusty >= 0.2-0",
+  "busted >= 1.7-1"
+}
+build = {
+  type = "builtin",
+  modules = {
+    ["lusty-config.init"]  = "src/init.lua"
+  }
+}
